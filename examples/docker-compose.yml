@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+
+    myapp:
+        build: .
+        container_name: myapp
+        restart: unless-stopped
+        volumes:
+            - "data:/data"
+        env_file:
+            - './myapp.env'
+
+volumes:
+    data:
