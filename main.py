@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
     sys.stderr.write("Using the following options:\n")
     for key in OPTIONS:
-        if 'pass' or 'key' in key:
+        if 'pass' in key or 'key' in key:
             logline = f"\t{key} set to {OPTIONS[key][0] + ('*' * (len(OPTIONS[key])-2)) + OPTIONS[key][-1]}"
         else:
             logline = f"\t{key} set to {OPTIONS[key]}"
